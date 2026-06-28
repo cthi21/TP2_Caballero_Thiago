@@ -1,0 +1,63 @@
+    1  lsblk
+    2  config.vm.box = "ubuntu/jammy64"
+    3  vagrant reload
+    4  cd ..
+    5  vagrant reload
+    6  cd --
+    7  vagrant cd..
+    8  cd ..
+    9  exit
+   10  lsblk
+   11  vagrant reload
+   12  vagrant-disksize
+   13  vagrant plugin install vagrant-disksize
+   14  exit
+   15  vagrant plugin install vagrant-disksize
+   16  setx VAGRANT_EXPERIMENTAL 1
+   17  vagrant reload
+   18  exit
+   19  lsblk
+   20  fdisk -l
+   21  sudo fdisk /dev/sdd
+   22  free
+   23  free -h
+   24  sudo mkswap /dev/sdd1
+   25  free -h
+   26  sudo swapon /dev/sdd1
+   27  free -h
+   28  swapon -s
+   29  lsbdsk
+   30  lsblk
+   31  sudo fdisk /dev/sde
+   32  sudo fdisk /dev/dse
+   33  t
+   34  sudo fdisk /dev/sde
+   35  sudo wipefs -a /dev/sde1
+   36  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sde1 /dev/sde2
+   37  pvs
+   38  sudo pvs
+   39  sudo vgcreate vg_datos /dev/sde1 /dev/sdd2
+   40  sudo vgs
+   41  sudo pvs
+   42  sudo vgcreate vg_web /dev/sde2
+   43  sudo pvs
+   44  sudo vgs
+   45  sudo lvcreate -L 1G vg_web -n lv_web1
+   46  sudo lvcreate -L 512M vg_web -n lv_web2
+   47  sudo lvcreate -L 512M vg_web -n lv_web3
+   48  sudo lvs
+   49  sudo pvs
+   50  sudo fdisk -l
+   51  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   52  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   53  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   54  pwd
+   55  exit
+   56  ls
+   57  ls -l
+   58  git clone https://github.com/cthi21/TP2_Caballero_Thiago
+   59  cd TP2_Caballero_Thiago/
+   60  sudo pvs > pvs.txt
+   61  sudo vgs > vgs.txt
+   62  sudo lvs > lvs.txt
+   63  history > historial_lvm.txt
